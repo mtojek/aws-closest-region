@@ -1,0 +1,3 @@
+export AWS_DEFAULT_REGION=`aws-closest-region --debug polly`
+export AWS_DEFAULT_REGION=`aws-closest-region --debug`
+export AWS_DEFAULT_REGION=`aws-closest-region`
