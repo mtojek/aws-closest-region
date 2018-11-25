@@ -55,7 +55,7 @@ func (s *Services) EndpointsForService(serviceName string) (Endpoints, error) {
 	}
 
 	if log.IsLevelEnabled(log.InfoLevel) {
-		log.Infoln("Service is accessing via following endpoints:")
+		log.Infoln("Service is accessible via following endpoints:")
 		for regionName, endpoint := range serviceEndpoints {
 			log.Infof("  %s: %s\n", regionName, endpoint)
 		}

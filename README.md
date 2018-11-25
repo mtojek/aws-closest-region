@@ -37,7 +37,7 @@ $ aws-closest-region s3
 INFO Service "s3" is available in 15 regions in "aws" partition. 
 INFO Service "s3" is available in 2 regions in "aws-cn" partition. 
 INFO Partition "us-gov" will be skipped.          
-INFO Service is accessing via following endpoints: 
+INFO Service is accessible via following endpoints: 
 INFO   ap-south-1: https://s3.ap-south-1.amazonaws.com 
 INFO   eu-central-1: https://s3.eu-central-1.amazonaws.com 
 INFO   us-east-2: https://s3.us-east-2.amazonaws.com 
