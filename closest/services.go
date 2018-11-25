@@ -7,7 +7,10 @@ import (
 	log "github.com/sirupsen/logrus"
 )
 
-const defaultServiceName = "dynamodb"
+const (
+	defaultServiceName = "dynamodb"
+	pingURLSuffix      = "/ping"
+)
 
 var errServiceNotAvailableInAnyRegion = errors.New("service is not available in any region")
 
@@ -42,7 +45,7 @@ func (s *Services) EndpointsForService(serviceName string) (Endpoints, error) {
 				if err != nil {
 					return nil, err
 				}
-				serviceEndpoints[regionName] = serviceEndpoint.URL
+				serviceEndpoints[regionName] = serviceEndpoint.URL + pingURLSuffix
 			}
 		}
 	}
