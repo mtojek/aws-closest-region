@@ -1,5 +1,5 @@
 # aws-closest-region
-Automatically select the closest AWS region and reduce latency 🔥
+Automatically select the closest AWS region and significantly reduce latency 🔥
 
 [![Build Status](https://travis-ci.org/mtojek/aws-closest-region.svg?branch=master)](https://travis-ci.org/mtojek/aws-closest-region)
 
