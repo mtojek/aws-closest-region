@@ -10,9 +10,9 @@ install:
 test: install
 	go get -t ./...
 	go test -v ./...
-	aws-closest-region
+	aws-closest-region harrypotter || test -n "$$?"
 	aws-closest-region --help || test -n "$$?"
 	aws-closest-region --verbose
-	aws-closest-region polly
+	aws-closest-region
 	aws-closest-region --verbose polly
-	aws-closest-region harrypotter || test -n "$$?"
+	aws-closest-region polly

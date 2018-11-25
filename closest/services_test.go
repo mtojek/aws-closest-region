@@ -3,8 +3,13 @@ package closest
 import (
 	"testing"
 
+	log "github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/assert"
 )
+
+func TestBefore(t *testing.T) {
+	log.SetLevel(log.ErrorLevel)
+}
 
 func TestServices_EndpointsForService_EmptyServiceName(t *testing.T) {
 	// given

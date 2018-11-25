@@ -12,8 +12,6 @@ func main() {
 	var verbose bool
 	flag.BoolVar(&verbose, "verbose", false, "verbose mode")
 	flag.Parse()
-	serviceName := flag.Arg(0)
-
 	log.SetFormatter(&log.TextFormatter{
 		DisableLevelTruncation: true,
 		DisableTimestamp:       true,
@@ -23,6 +21,8 @@ func main() {
 	} else {
 		log.SetLevel(log.ErrorLevel)
 	}
+
+	serviceName := flag.Arg(0)
 
 	services := new(closest.Services)
 	serviceEndpoints, err := services.EndpointsForService(serviceName)
