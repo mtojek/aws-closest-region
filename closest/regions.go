@@ -11,7 +11,8 @@ import (
 const measureRepeats = 5
 
 var (
-	errEndpointsUnavailable = errors.New("service endpoints are unavailable")
+	errAllEndpointsUnavailable            = errors.New("all service endpoints are unavailable")
+	errRegionalServiceEndpointUnavailable = errors.New("regional service endpoint is unavailable")
 
 	httpClient = http.Client{Timeout: 30 * time.Second}
 )
@@ -38,7 +39,7 @@ func (r *Regions) FindClosest(endpoints Endpoints) (string, error) {
 	}
 
 	if len(latencies) == 0 {
-		return "", errEndpointsUnavailable
+		return "", errAllEndpointsUnavailable
 	}
 
 	theRegion, theLatency := r.regionWithLowestLatency(latencies)
@@ -64,6 +65,10 @@ func (r *Regions) measureLatency(endpoint string) (time.Duration, error) {
 		if response != nil && response.Body != nil {
 			response.Body.Close()
 		}
+	}
+
+	if c == 0 {
+		return -1, errRegionalServiceEndpointUnavailable
 	}
 	return time.Duration(sum / c), nil
 }
