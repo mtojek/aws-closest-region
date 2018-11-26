@@ -32,7 +32,7 @@ eu-central-1
 You can select also a particular service:
 
 ~~~
-$ go get go get github.com/mtojek/aws-closest-region
+$ go get github.com/mtojek/aws-closest-region
 $ aws-closest-region s3
 INFO Service "s3" is available in 15 regions in "aws" partition. 
 INFO Service "s3" is available in 2 regions in "aws-cn" partition. 
@@ -47,7 +47,7 @@ INFO   us-east-2: https://s3.us-east-2.amazonaws.com
 Or run in verbose mode:
 
 ~~~
-$ go get go get github.com/mtojek/aws-closest-region
+$ go get github.com/mtojek/aws-closest-region
 $ aws-closest-region --verbose s3
 eu-central-1
 ~~~
