@@ -17,6 +17,7 @@ Find the **closest AWS region** to your customers and **reduce the latency** whi
 
  * support **100% AWS regions** in all non-gov partitions (incl. China)
  * support **100% AWS services** (also brand new ones)
+ * latency measured using the HTTP protocol (*/ping* service endpoint) instead of the ICMP messages
  * **quick integration** with shell scripts (``AWS_DEFAULT_REGION=`aws-closest-region` ``)
  * automatically detect next launched endpoints (use AWS SDK models)
  * verbose mode to show all latencies
