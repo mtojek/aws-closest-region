@@ -25,8 +25,9 @@ Find the **closest AWS region** to your customers and **reduce the latency** whi
 ## Getting started
 
 ~~~
+$ cd ~/
 $ go get github.com/mtojek/aws-closest-region
-$ aws-closest-region
+$ ~/go/bin/aws-closest-region
 eu-central-1
 ~~~
 
@@ -34,7 +35,7 @@ You can select also a particular service:
 
 ~~~
 $ go get github.com/mtojek/aws-closest-region
-$ aws-closest-region s3
+$ ~/go/bin/aws-closest-region s3
 INFO Service "s3" is available in 15 regions in "aws" partition. 
 INFO Service "s3" is available in 2 regions in "aws-cn" partition. 
 INFO Partition "us-gov" will be skipped.          
@@ -49,7 +50,7 @@ Or run in verbose mode:
 
 ~~~
 $ go get github.com/mtojek/aws-closest-region
-$ aws-closest-region --verbose s3
+$ ~/go/bin/aws-closest-region --verbose s3
 eu-central-1
 ~~~
 
