@@ -24,7 +24,7 @@ Find the **closest AWS region** to your customers and **reduce the latency** whi
 ## Getting started
 
 ~~~
-$ go get go get github.com/mtojek/aws-closest-region
+$ go get github.com/mtojek/aws-closest-region
 $ aws-closest-region
 eu-central-1
 ~~~
